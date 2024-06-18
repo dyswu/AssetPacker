@@ -1,24 +1,6 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Jun  6 16:04:11 2024
+#:kivy 2.2.1
 
-Generate DB to store files
-
-@author: derew
-"""
-
-
-import pandas as pd
-import hashlib
-import databases
-
-from kivy.app import App
-from kivy.lang import Builder
-from kivy.uix.widget import Widget
-from kivy.uix.button import Button
-
-kv = Builder.load_string(
-"""
+<Menu>:   
 BoxLayout:
     orientation: "vertical"
     padding: dp(50)
@@ -78,15 +60,3 @@ BoxLayout:
         markup: True
         halign: "center"
         text_size: root.width, None
-"""
-)
-
-class MenuApp(App):
-    def build(self):
-        return kv
-
-
-if __name__ == '__main__':
-    MenuApp().run()
-    
- 
